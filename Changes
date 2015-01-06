@@ -1,5 +1,12 @@
 Revision history for Regexp-Stringify
 
+0.02    2015-01-06 (PERLANCAR)
+
+	- No functional changes.
+
+	- [doc] Fix/update examples in Synopsis.
+
+
 0.01    2015-01-06 (PERLANCAR)
 
         - First release.
