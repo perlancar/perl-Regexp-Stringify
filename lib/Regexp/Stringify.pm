@@ -86,9 +86,9 @@ sub stringify_regexp {
         return "qr($pat)$mod";
     } else {
         if ($ge_5140) {
-            "(^$mod:$pat)";
+            return "(^$mod:$pat)";
         } else {
-            "(?:(?$mod-)$pat)";
+            return "(?:(?$mod-)$pat)";
         }
     }
 }
