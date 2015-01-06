@@ -58,7 +58,8 @@ _
             description => <<'_',
 
 If you set this to 1, then `qr/a/i` will be stringified as `'qr/a/i'` instead as
-`'(^i:a)'`.
+`'(^i:a)'`. The resulting string can then be eval-ed to recreate the Regexp
+object.
 
 _
         },
@@ -98,9 +99,11 @@ sub stringify_regexp {
 
 =head1 SYNOPSIS
 
+Assuming this runs on Perl 5.14 or newer.
+
  use Regexp::Stringify qw(stringify_regexp);
- $str = stringify_regexp(regexp=>qr/abc/i);                         # 'qr(abc)i'
- $str = stringify_regexp(regexp=>qr/abc/i, with_qr=>0);             # '(?i:abc)'
- $str = stringify_regexp(regexp=>qr/a/i, with_qr=>0, plver=>5.012); # '(?i-)a'
- $str = stringify_regexp(regexp=>qr/a/ui, plver=>5.012);            # 'qr(a)i'
+ $str = stringify_regexp(regexp=>qr/a/i);                       # '(^i:a)'
+ $str = stringify_regexp(regexp=>qr/a/i, with_qr=>1);           # 'qr(a)i'
+ $str = stringify_regexp(regexp=>qr/a/i, plver=>5.010);         # '(?:(?i-)a)'
+ $str = stringify_regexp(regexp=>qr/a/ui, plver=>5.010);        # '(?:(?i-)a)'
 
