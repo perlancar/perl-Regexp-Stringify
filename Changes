@@ -1,5 +1,11 @@
 Revision history for Regexp-Stringify
 
+0.03    2015-01-08 (PERLANCAR)
+
+	- [Bugfix][test] Enclose perl 5.14 construct inside eval(...) to
+	  avoid compilation failure [CT].
+
+
 0.02    2015-01-06 (PERLANCAR)
 
 	- No functional changes.
