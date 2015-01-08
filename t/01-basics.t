@@ -17,8 +17,10 @@ is(stringify_regexp(regexp=>qr/a/i, plver=>'5.12.0'), '(?:(?i-)a)');
 
 # strip unknown regex modifiers
 if (version_ge($^V, '5.14.0')) {
+    eval q|
     is(stringify_regexp(regexp=>qr/a/ui, plver=>'5.14.0'), '(^ui:a)');
     is(stringify_regexp(regexp=>qr/a/ui, plver=>'5.12.0'), '(?:(?i-)a)');
+    }|;
 }
 
 #arg: with_qr
