@@ -48,8 +48,8 @@ previously be stringified as `(?i-xsm:hlagh)`, but now it's stringified as
 still produce the former. It will also ignore regexp modifiers that are
 introduced in newer perls.
 
-Note that not all regexp objects will be translated to older perls, e.g. if it
-contains constructs not known to older perls.
+Note that not all regexp objects are translatable to older perls, e.g. if they
+contain constructs not known to older perls like `(^...)` before perl 5.14.
 
 _
         },
