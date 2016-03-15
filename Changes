@@ -1,5 +1,10 @@
 Revision history for Regexp-Stringify
 
+0.05    2016-03-15 (PERLANCAR)
+
+	- Remove the use of Version::Util to reduce dependencies.
+
+
 0.04    2015-09-04 (PERLANCAR)
 
 	- No functional changes.
