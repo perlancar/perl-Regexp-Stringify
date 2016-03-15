@@ -8,7 +8,6 @@ use strict;
 use warnings;
 
 use re qw(regexp_pattern);
-use Version::Util qw(version_ge);
 
 use Exporter;
 our @ISA = qw(Exporter);
@@ -78,7 +77,7 @@ sub stringify_regexp {
 
     my ($pat, $mod) = regexp_pattern($re);
 
-    my $ge_5140 = version_ge($plver, 5.014);
+    my $ge_5140 = version->parse($plver) >= version->parse('5.14.0');
     unless ($ge_5140) {
         $mod =~ s/[adlu]//g;
     }
@@ -106,4 +105,3 @@ Assuming this runs on Perl 5.14 or newer.
  $str = stringify_regexp(regexp=>qr/a/i, with_qr=>1);           # 'qr(a)i'
  $str = stringify_regexp(regexp=>qr/a/i, plver=>5.010);         # '(?:(?i-)a)'
  $str = stringify_regexp(regexp=>qr/a/ui, plver=>5.010);        # '(?:(?i-)a)'
-
