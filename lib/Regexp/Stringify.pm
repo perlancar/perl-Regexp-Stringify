@@ -48,7 +48,7 @@ still produce the former. It will also ignore regexp modifiers that are
 introduced in newer perls.
 
 Note that not all regexp objects are translatable to older perls, e.g. if they
-contain constructs not known to older perls like `(^...)` before perl 5.14.
+contain constructs not known to older perls like `(?^...)` before perl 5.14.
 
 _
         },
@@ -57,7 +57,7 @@ _
             description => <<'_',
 
 If you set this to 1, then `qr/a/i` will be stringified as `'qr/a/i'` instead as
-`'(^i:a)'`. The resulting string can then be eval-ed to recreate the Regexp
+`'(?^i:a)'`. The resulting string can then be eval-ed to recreate the Regexp
 object.
 
 _
