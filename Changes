@@ -1,16 +1,16 @@
-0.06    2016-10-29 (PERLANCAR)
+0.06    2016-10-29  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Fix a couple of typos.
 
 
-0.05    2016-03-15 (PERLANCAR)
+0.05    2016-03-15  Released-By: PERLANCAR
 
 	- Remove the use of Version::Util to reduce dependencies.
 
 
-0.04    2015-09-04 (PERLANCAR)
+0.04    2015-09-04  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -19,19 +19,19 @@
 	  requirement.
 
 
-0.03    2015-01-08 (PERLANCAR)
+0.03    2015-01-08  Released-By: PERLANCAR
 
 	- [Bugfix][test] Enclose perl 5.14 construct inside eval(...) to
 	  avoid compilation failure [CT].
 
 
-0.02    2015-01-06 (PERLANCAR)
+0.02    2015-01-06  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- [doc] Fix/update examples in Synopsis.
 
 
-0.01    2015-01-06 (PERLANCAR)
+0.01    2015-01-06  Released-By: PERLANCAR
 
         - First release.
